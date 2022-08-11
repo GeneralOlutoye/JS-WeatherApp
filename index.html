@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background"></div>
+        <input type="text" placeholder="Enter City Name" id="txtArea" onkeypress='search()'>
+        <button id="getReq">Search</button>
+        <div class="weather-box"></div>
+        <div class="locationBox"></div>
+        <div className="date"></div>
+        <div id="display">Enter Valid City Name</div>
+    </div>
+</body>
+
+</html>
