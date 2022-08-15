@@ -18,9 +18,23 @@ getBtn.addEventListener('click', () => {
     .then(res =>{
         display.textContent=`${Math.round(res.main.temp)}°C`
         locationBox.textContent=`${res.name}, ${res.sys.country}`;
+        document.querySelector('.container').style.backgroundImage= "url('./images/warm-bg.jpg')"
     })
 
     TxtArea.value=''
+
+    }else{
+        TxtArea.value= ''
+        locationBox.textContent = ''
+        display.textContent= 'Enter Valid City'
+        document.querySelector('.container').style.backgroundImage= "url('./images/cold-bg.jpg')"
+    }
+
+    
+    const jsDate = `${dateBuilder(new Date())}`
+
+    date.innerHTML= `${jsDate}`
+    document.querySelector('.container').style.backgroundImage= "url('./images/warm-bg.jpg')"
     
     const dateBuilder = (d) => {
         let months = ["January" , "Februaury" , "March" , "April" , "May" , "June" , "July" , "August" , "September" ,
@@ -34,17 +48,6 @@ getBtn.addEventListener('click', () => {
         let year = d.getFullYear();
     
         return `${day} ${date}, ${month} ${year}`
-    }
-
-    const jsDate = `${dateBuilder(new Date())}`
-
-    date.innerHTML= jsDate
-
-    document.querySelector('.container').style.backgroundImage= "url('./images/warm-bg.jpg')"
-    }else{
-        TxtArea.value= ''
-        display.textContent= 'Enter Valid City'
-        document.querySelector('.container').style.backgroundImage= "url('./images/cold-bg.jpg')"
     }
 
 })
