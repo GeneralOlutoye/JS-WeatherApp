@@ -52,6 +52,8 @@ getBtn.addEventListener('click', () => {
 
 })
 
+
+
 TxtArea.addEventListener("onkeypress", (event)=>{
     event.preventDefault()
     city = TxtArea.value
