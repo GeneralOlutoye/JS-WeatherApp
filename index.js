@@ -5,6 +5,7 @@ const locationBox = document.querySelector('.locationBox')
 const date = document.querySelector('.date')
 
 let city
+{/*an eventlisterner that takes the function of fetch and pulls data from the openweathermap.org and saves the renders the response */}
 getBtn.addEventListener('click', () => {
 
     city = TxtArea.value
@@ -30,7 +31,7 @@ getBtn.addEventListener('click', () => {
         document.querySelector('.container').style.backgroundImage= "url('./images/cold-bg.jpg')"
     }
 
-    
+    {/*a function that updates date and time*/}
     const jsDate = `${dateBuilder(new Date())}`
 
     date.innerHTML= `${jsDate}`
